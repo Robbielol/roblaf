@@ -1,23 +1,49 @@
-
-.header-container {
-    position: relative;
-    top: 0;
-    width: 100%;
-    height: 15em; /* Adjust height as needed */
-    overflow: hidden;
+.header-section {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 60% auto;
+    margin: 5% 5% 10% 5%;
 }
 
-.home-header-image {
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    margin-left: 2em;
 }
 
 .middle-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
     color: white; /* Adjust color based on your image */
+    font-size: 1.3em;
+    padding: 0;
+}
+
+h2{
+    font-size: 1.2em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+    text-align: start;
+    margin-block: 0;
+    margin-bottom: 0.5em;
+}
+
+.body-text {
+    text-align: start;
+    font-size: 0.8em;
+}
+
+.dynamic-text {
+    opacity: 0;
+    transition: opactity 1s;
+}
+
+.dynamic-text {
+    opacity: 1;
+}
+
+/*Component css*/
+.center-component {
+    align-self: center;
 }
