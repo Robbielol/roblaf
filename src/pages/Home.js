@@ -1,8 +1,9 @@
 import Navigation from "../Navigation";
 import Footer from "../Footer";
 import "./Home.css";
-import profilePic from "../Images/temp-profile.png"
-import { useEffect, useState } from "react";
+import profilePic from "../Images/temp-profile.png";
+import Skills from "../skills.json";
+import React, { useEffect, useState } from "react";
 
 const HeaderImage = () => {
     const middleTextDisplay = ["A Web Developer", "A Freelance Developer", "A Backend Developer", "Your Personal Developer"];
@@ -33,7 +34,6 @@ const HeaderImage = () => {
                 return () => clearTimeout(wordPauseTimer);
             }
         } else {
-            console.log(middleTextDisplay[3]);
             setDisplayTitleDesc(middleTextDisplay[3]);
         }
     }, [charIndex, wordIndex, middleTextSplit, middleTextDisplay]);
@@ -79,6 +79,25 @@ const ProfilePic = () => {
     );
 }
 
+
+const SkillSection = () => {
+    return (
+        <div className="section-container">
+            My Skills
+            <div className="skills-container">
+            { Skills.map((skill) => {
+                return (
+                    <div className="skill-box">
+                        <h4>{skill.Name}</h4>
+                        <h4>{skill.Value}</h4>
+                    </div>
+                );
+            }) }
+            </div>
+        </div>
+    )
+}
+
 const HomePage = () => {
     
     return (
@@ -88,8 +107,11 @@ const HomePage = () => {
                 <ProfilePic />
             </div>
             <div className="skills-section">
-            <p>_______________________________________________________________________________________________________________________</p>
-            <h2>My Skills & Knowledge</h2>
+                <p>_______________________________________________________________________________________________________________________</p>
+                <h2>My Skills & Knowledge</h2>
+                <div> <SkillSection/>
+
+                </div>
             </div>
             <Navigation />
             <Footer />

@@ -1,0 +1,17 @@
+[
+    {
+        "Name": "React",
+        "Value": 65,
+        "Logo": "react-devicon/react/original-wordmark/"
+    },
+    {
+        "Name": "C#",
+        "Value": 75,
+        "Logo": "react-devicon/csharp/original"
+    },
+    {
+        "Name": "Java",
+        "Value": 70,
+        "Logo": "react-devicon/java/original"
+    }
+]
