@@ -2,16 +2,67 @@
     {
         "Name": "React",
         "Value": 65,
-        "Logo": "react-devicon/react/original-wordmark/"
+        "Component": "DiReact",
+        "Color": "#61DBFB"
     },
     {
-        "Name": "C#",
+        "Name": "JavaScript",
         "Value": 75,
-        "Logo": "react-devicon/csharp/original"
+        "Component": "DiJavascript1",
+        "Color": "#F0DB4F"
     },
     {
         "Name": "Java",
         "Value": 70,
-        "Logo": "react-devicon/java/original"
+        "Component": "DiJava",
+        "Color": "#"
+    },
+    {
+        "Name": "HTML5",
+        "Value": 80,
+        "Component": "DiHtml5",
+        "Color": "#E34C26"
+    },
+    {
+        "Name": "CSS3",
+        "Value": 75,
+        "Component": "DiCss3",
+        "Color": "#3C99DC"
+    },
+    {
+        "Name": "SQL",
+        "Value": 70,
+        "Component": "TbSql",
+        "Color": "#00758F"
+    },
+    {
+        "Name": ".NET",
+        "Value": 65,
+        "Component": "SiDotnet",
+        "Color": "#9B71A7"
+    },
+    {
+        "Name": "Python",
+        "Value": 55,
+        "Component": "DiPython", 
+        "Color": "#FFE873"
+    },
+    {
+        "Name": "GitHub",
+        "Value": 75,
+        "Component": "DiGithubBadge",
+        "Color": "White"
+    },
+    {
+        "Name": "Node",
+        "Value": 55,
+        "Component": "DiNodejsSmall",
+        "Color": "Green"
+    },
+    {
+        "Name": "C#",
+        "Value": 70,
+        "Component": "CSharp",
+        "Color": "Purple"
     }
 ]

@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: rgb(40, 44, 52);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -17,6 +17,10 @@
   font-weight: 400;
   display: inline;
   color: #a5a5a7;
+}
+
+.page-title {
+  text-align: center;
 }
 
 button{

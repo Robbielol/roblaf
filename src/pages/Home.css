@@ -43,6 +43,66 @@ h2{
     opacity: 1;
 }
 
+.skills-container{ 
+    display: grid;
+    align-content: space-evenly;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto;
+    gap: 0.5em;
+    margin: 5% 5% 10% 5%;
+}
+
+.skill-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(48, 48, 50);
+    width: 8em;
+    border-radius: 2em;
+    box-shadow: 0.5em 0.5em rgba(20, 22, 26, 0.7);
+    margin-bottom: 1em;
+    transition: transform 0.3s ease; /* Smooth transition */
+    cursor: pointer; /* Optional: Indicate it's interactive */
+}
+
+.skill-box:hover{
+    transform: translateY(-0.5em); /* Move up by 10px */
+}
+
+.circular-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px; /* Size of the circular bar */
+    height: 150px;
+    padding-bottom: 0.5em;
+    position: relative;
+  }
+  
+  .progress-circle {
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(
+      #4caf50 calc(var(--progress) * 1%), /* Highlighted progress */
+      #ddd 0% /* Remaining area */
+    );
+    border-radius: 50%; /* Make it circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden; /* Ensures the center image doesn't overflow */
+  }
+  
+  .center-image {
+    width: 50%;
+    height: 50%;
+    object-fit: cover; /* Ensures the image maintains its aspect ratio */
+    border-radius: 50%; /* Make the image circular */
+    padding: 0.5em;
+    background-color: rgb(48, 48, 50);
+  }
+
 /*Component css*/
 .center-component {
     align-self: center;

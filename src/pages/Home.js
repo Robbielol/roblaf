@@ -3,7 +3,20 @@ import Footer from "../Footer";
 import "./Home.css";
 import profilePic from "../Images/temp-profile.png";
 import Skills from "../skills.json";
+import { 
+    DiReact, 
+    DiJava, 
+    DiJavascript1, 
+    DiHtml5, 
+    DiCss3, 
+    DiPython,
+    DiGithubBadge,
+    DiNodejsSmall 
+} from "react-icons/di";
+import { TbSql } from "react-icons/tb";
+import CSharp from "../SVGs/CSharp"
 import React, { useEffect, useState } from "react";
+import { SiDotnet } from "react-icons/si";
 
 const HeaderImage = () => {
     const middleTextDisplay = ["A Web Developer", "A Freelance Developer", "A Backend Developer", "Your Personal Developer"];
@@ -70,8 +83,7 @@ const HeaderImage = () => {
     );
 }
 
-const ProfilePic = () => {
-
+const ProfilePic = () => {     
     return(
         <div className="profile-image-container">
             <img src={profilePic} alt="profile-image"/>
@@ -81,25 +93,47 @@ const ProfilePic = () => {
 
 
 const SkillSection = () => {
+    const iconComponents = {
+        DiReact,
+        DiJavascript1,
+        DiJava,
+        DiHtml5,
+        DiCss3,
+        TbSql,
+        SiDotnet,
+        DiPython,
+        DiGithubBadge,
+        DiNodejsSmall,
+        CSharp
+    };
     return (
         <div className="section-container">
-            My Skills
             <div className="skills-container">
-            { Skills.map((skill) => {
+            { Skills.map((skill, index) => {
+                const IconComponent = iconComponents[skill.Component];
                 return (
-                    <div className="skill-box">
+                    <div key={index} className="skill-box">
                         <h4>{skill.Name}</h4>
-                        <h4>{skill.Value}</h4>
+                        <KnowledgeBar progress={skill.Value}  IconComponent={IconComponent} color={skill.Color}/>
                     </div>
                 );
             }) }
             </div>
         </div>
-    )
+    );
 }
 
+const KnowledgeBar = ({ progress, IconComponent, color }) => {
+    return (
+        <div className="circular-bar">
+            <div className="progress-circle" style={{ '--progress': progress }}>
+                <IconComponent color={color} size="100" className="center-image" />
+            </div>
+        </div>
+    );
+};
+
 const HomePage = () => {
-    
     return (
         <>
             <div className="header-section">
@@ -108,10 +142,8 @@ const HomePage = () => {
             </div>
             <div className="skills-section">
                 <p>_______________________________________________________________________________________________________________________</p>
-                <h2>My Skills & Knowledge</h2>
-                <div> <SkillSection/>
-
-                </div>
+                <h2 className="page-title">My Skills & Knowledge</h2>
+                <div> <SkillSection/> </div>
             </div>
             <Navigation />
             <Footer />
