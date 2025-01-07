@@ -1,3 +1,13 @@
+:root{
+    --light-primary: rgb(218, 218, 218);
+    --light-secondary: rgb(0, 106, 139);
+    --light-footer: rgb(48, 48, 50);
+    --dark-text: #000;
+    --light-text: #fff;
+    --dark-primary: rgb(48, 48, 50);
+    --dark-footer: rgb(218, 218, 218);
+  }
+
 .header-section {
     display: grid;
     gap: 2em;
@@ -15,8 +25,9 @@
 
 .middle-text {
     display: flex;
-    color: white; /* Adjust color based on your image */
+    color: var(--light-secondary); /* Adjust color based on your image */
     font-size: 1.3em;
+    font-weight: 700;
     padding: 0;
 }
 
@@ -56,13 +67,19 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(48, 48, 50);
+    color: var(--light-text);
+    background-color: var(--light-footer);
     width: 8em;
     border-radius: 2em;
     box-shadow: 0.5em 0.5em rgba(20, 22, 26, 0.7);
     margin-bottom: 1em;
     transition: transform 0.3s ease; /* Smooth transition */
     cursor: pointer; /* Optional: Indicate it's interactive */
+}
+
+.skill-box.dark-mode{
+    color: var(--dark-text);
+    background-color: var(--dark-footer);
 }
 
 .skill-box:hover{
@@ -100,9 +117,13 @@ h2{
     object-fit: cover; /* Ensures the image maintains its aspect ratio */
     border-radius: 50%; /* Make the image circular */
     padding: 0.5em;
-    background-color: rgb(48, 48, 50);
+    background-color: var(--light-footer);
   }
 
+  .center-image.darkmode{
+    background-color: var(--dark-footer);
+  }
+  
 /*Component css*/
 .center-component {
     align-self: center;

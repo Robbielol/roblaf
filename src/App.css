@@ -1,14 +1,29 @@
+:root{
+  --light-primary: rgb(218, 218, 218);
+  --light-secondary: rgb(0, 106, 139);
+  --light-footer: rgb(48, 48, 50);
+  --dark-text: #000;
+  --light-text: #fff;
+  --dark-primary: rgb(48, 48, 50);
+  --dark-footer: rgb(218, 218, 218);
+}
+
 .App {
   text-align: center;
 }
 
 .App-header {
-  background-color: rgb(40, 44, 52);
+  background-color: var(--light-primary);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--dark-text);
+}
+
+.App-header.dark-mode{
+  background-color: var(--dark-primary);
+  color: var(--light-text);
 }
 
 .text-style{
@@ -16,7 +31,7 @@
   font-style: italic;
   font-weight: 400;
   display: inline;
-  color: #a5a5a7;
+  color: var(--light-secondary);
 }
 
 .page-title {
@@ -26,15 +41,19 @@
 button{
   padding: 0.5em 1em;
   border-radius: 0.5em;
-  border-color: rgb(0, 106, 139);
+  border-color: var(--light-secondary);
   border-width: 0.3em;
   border-style: solid;
   background-color: #282c3400;
   font-weight: 500;
   font-size: 0.8em;
-  color: white; 
+  color: var(--dark-text); 
+}
+
+button.dark-mode{
+  color: var(--light-text);
 }
 
 button:hover{
-  background-color: rgb(0, 106, 139);
+  background-color: var(--light-secondary);
 }
