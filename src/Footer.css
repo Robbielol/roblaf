@@ -1,13 +1,3 @@
-:root{
-  --light-primary: rgb(218, 218, 218);
-  --light-secondary: rgb(0, 106, 139);
-  --light-footer: rgb(48, 48, 50);
-  --dark-text: #000;
-  --light-text: #fff;
-  --dark-primary: rgb(48, 48, 50);
-  --dark-footer: rgb(218, 218, 218);
-}
-
 .footer {
     background-color: var(--light-footer); /* White background */
     padding: 40px 20px;
@@ -36,30 +26,43 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  }
+
+  .footer-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 1em;
   }
   
   .footer-logo img {
     max-height: 800px;
-    height: 200px;
+    height: 150px;
     width: auto;
+    border-radius: 25%;
   }
-  
-  .footer-menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+
+  .footer-caption {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: fit-content;
+    margin-left: 1em;
+    border: var(--light-primary) solid 0.1em;
   }
-  
-  .footer-menu ul li {
-    margin-bottom: 10px;
+
+  .footer-caption.dark-mode {
+    border: var(--dark-primary) solid 0.1em
   }
-  
-  .footer-menu ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
+
+  .footer-caption h2{
+    padding: 0.5em;
+    text-align: center;
+    color: var(--light-secondary);
+    text-shadow: none;
+    margin-bottom: 0;
   }
   
   .footer-hours, .footer-contact {
@@ -67,24 +70,64 @@
   }
   
   .footer-content h3 {
+    text-align: left;
     margin-bottom: 10px;
     font-size: 1.2rem;
-    color: #000;
+    color: var(--light-secondary);
+  }
+
+  .footer-content p {
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .footer-content a {
+    text-decoration: none;
+    color: var(--light-text) !important;
+  }
+
+  .footer-content a:hover {
+    text-decoration: none;
+    color: var(--light-secondary) !important; 
+  }
+  
+  .footer-menu{
+    padding: 0 1em;
   }
   
   .footer p {
     margin: 5px 0;
   }
 
+  .sign-up-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+  }
+
+  .email-input {
+    padding: 1em;
+  }
+
+  .email-button {
+    padding: 1em;
+    border-radius: 0;
+    background-color: var(--light-secondary);
+  }
+  
+  .email-button:hover {
+    background-color: var(--light-footer);
+  }
+
+  .email-button.dark-mode:hover {
+    background-color: var(--dark-footer);
+  }
+
   @media (max-width: 768px) {
     .footer-content {
       flex-direction: column;
       align-items: center;
-    }
-  
-    .footer-menu ul {
-      text-align: center;
-      font-size: 1rem;
     }
 
     .footer-content h3 {

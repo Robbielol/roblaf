@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import logo from "./Images/rd.png"
+import logo from "./Images/rob-laf-logo.jpg"
 import "./Navigation.css";
 
 const Navigation = () => {
