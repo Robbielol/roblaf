@@ -1,16 +1,16 @@
 import React from 'react';
-import { FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const SocialMediaLinks = () => {
 
 
   return (
     <div className="social-media-links">
-      <a href="https://www.instagram.com/robertlaffan/" target="_blank" rel="noopener noreferrer">
-        <FaInstagram size="3em" className="social-icon" />
+      <a href="https://github.com/robbielol/" target="_blank" rel="noopener noreferrer">
+        <FaGithub size="2em" className="social-icon" />
       </a>
-      <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
-        <FaLinkedin size="3em" className="social-icon" />
+      <a href="https://www.linkedin.com/in/robert-laffan-5a82a9141/" target="_blank" rel="noopener noreferrer">
+        <FaLinkedin size="2em" className="social-icon" />
       </a>
     </div>
   );

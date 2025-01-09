@@ -1,3 +1,4 @@
+import HeaderBar from "../HeaderBar"
 import Navigation from "../Navigation";
 import Footer from "../Footer";
 import "./Home.css";
@@ -136,6 +137,7 @@ const KnowledgeBar = ({ progress, IconComponent, color }) => {
 const HomePage = () => {
     return (
         <>
+            <HeaderBar />
             <div className="header-section">
                 <HeaderImage />
                 <ProfilePic />
