@@ -1,4 +1,4 @@
-import logo from "./Images/rob-laf-logo.jpg";
+import logo from "./Images/rob-laf-logo-trans.png";
 import "./Footer.css";
 
 const Footer = () => {
