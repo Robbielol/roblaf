@@ -1,5 +1,9 @@
 import React, {useState} from "react";
 import logo from "./Images/rob-laf-logo.jpg"
+import { FiHome } from "react-icons/fi";
+import { MdWorkOutline } from "react-icons/md";
+import { BsPersonWorkspace } from "react-icons/bs";
+import { RiContactsLine } from "react-icons/ri";
 import "./Navigation.css";
 
 const Navigation = () => {
@@ -23,11 +27,11 @@ const Navigation = () => {
           </div>
           <div className={`sticky-menu`}>
           </div>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#experience">Experience</a></li>
-              <li><a href="#contact">Contact</a></li>
+            <ul className={`nav-list ${isMenuOpen ? 'open' : ''}`}>
+              <li href='/Home'><FiHome size='1.5em'/><a>Home</a></li>
+              <li href='/Portfolio'><BsPersonWorkspace size='1.5em'/><a>Portfolio</a></li>
+              <li href='/Experience'><MdWorkOutline size='1.5em'/><a >Experience</a></li>
+              <li href='/Contact'><RiContactsLine size='1.5em'/><a>Contact</a></li>
             </ul>
         </div>
         {isMenuOpen && <div className="overlay" onClick={toggleMenu}></div>}
