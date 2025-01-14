@@ -1,13 +1,3 @@
-:root{
-    --light-primary: rgb(218, 218, 218);
-    --light-secondary: rgb(0, 106, 139);
-    --light-footer: rgb(48, 48, 50);
-    --dark-text: #000;
-    --light-text: #fff;
-    --dark-primary: rgb(48, 48, 50);
-    --dark-footer: rgb(218, 218, 218);
-  }
-
 .header-section {
     display: grid;
     gap: 2em;
