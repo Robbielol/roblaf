@@ -14,7 +14,6 @@ const HeaderBar = () => {
     }
 
     const SwitchMode = () => {
-        console.log("Check");
         setDarkMode((prev) => !prev)
     }
 
@@ -25,6 +24,16 @@ const HeaderBar = () => {
             ChangeColorMode('rgb(218, 218, 218)', 'rgb(48, 48, 50)', '#000', '#fff')
         }
     }, [darkMode]);
+
+    const handleDownload = () => {
+        const fileUrl = "/Robert-Laffan.docx"; // Replace with your file URL
+        const link = document.createElement("a");
+        link.href = fileUrl;
+        link.download = "Robert-Laffan.docx"; // Set the file name for download
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
 
     return (
         <>
@@ -40,7 +49,7 @@ const HeaderBar = () => {
                 </div>
                 <div className="topbar-button-section">
                     <div className="topbar-resume-button">
-                        <button className="resume-button">Download Resume</button>
+                        <button onClick={() => {handleDownload()}} className="resume-button">Download Resume</button>
                     </div>
                     <div className="topbar-social-media-buttons">
                         <SocialMediaLinks />

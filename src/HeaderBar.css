@@ -28,6 +28,7 @@
 }
 
 .resume-button {
+    cursor: pointer;
     background-color: var(--dark-primary); 
     color: var(--light-text);   
 }
