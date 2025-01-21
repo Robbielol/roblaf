@@ -1,0 +1,14 @@
+{
+    "name": "roblaf",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "axios": "^1.7.9",
+      "cors": "^2.8.5"
+    },
+    "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js"
+    }
+}

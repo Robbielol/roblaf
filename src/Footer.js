@@ -1,7 +1,47 @@
 import logo from "./Images/rob-laf-logo-trans.png";
 import "./Footer.css";
+import axios from 'axios';
+import { useState } from "react";
+
 
 const Footer = () => {
+    const [email, setEmail] = useState('');
+    const [status, setStatus] = useState('');
+
+    const HandleEmail = (value) => {
+        setStatus('');
+        setEmail(value);
+    }
+
+    const ValidateEmail = () => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        // Check if the email matches the regex
+        if (!emailRegex.test(email)) {
+            setStatus("Invalid email format");
+            return false;
+        }
+
+        return true;
+    }
+
+    const RegisterEmail = async (e) => {
+        e.preventDefault();
+        try{
+            if (ValidateEmail()) {
+                const response = await axios.post("/api/add-email", {email})
+                if (response.data === "Email added successfully") {
+                    setEmail('');
+                }
+
+                setStatus(response.data);        
+            }
+            console.log(status)
+        }catch (error) {
+            console.error(error);
+            setStatus('An error occurred while sending the message.');
+        }
+       
+    }
 
     return (
         <div className="footer">
@@ -23,21 +63,24 @@ const Footer = () => {
                     </div>
 
                     <div className="footer-menu">
-                    <h3>Previous Work</h3>
-                    <p><a href="https://github.com/Robbielol/">GitHub</a></p>
-                    <p><a href="/portfolio">Portfolio</a></p>
+                        <h3>Previous Work</h3>
+                        <p><a href="https://github.com/Robbielol/">GitHub</a></p>
+                        <p><a href="/portfolio">Portfolio</a></p>
                     </div>
 
                     <div className="footer-menu">
-                    <h3>Get Updates</h3>
-                    <form className="sign-up-form">
-                        <input 
-                        type="email" 
-                        placeholder="Sign up to recieve news and updates..."
-                        className="email-input" 
-                        />
-                        <button className="email-button">Sign Up</button>
-                    </form>
+                        <h3>Get Updates</h3>
+                        <form onSubmit={RegisterEmail} className="sign-up-form">
+                            <input 
+                                type="email" 
+                                placeholder="Sign up to recieve news and updates..."
+                                value={email}
+                                onChange={(e) => HandleEmail(e.target.value)}
+                                className="email-input" 
+                            />
+                            <button type="submit"  className="email-button">Sign Up</button>
+                        </form>
+                        <p className="email-status-text">{status}</p>
                     </div>
                 </div>
             </div>

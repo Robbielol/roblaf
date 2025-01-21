@@ -112,6 +112,7 @@
   }
 
   .email-button {
+    cursor: pointer;
     padding: 1em;
     border-radius: 0;
     background-color: var(--light-secondary);
@@ -125,6 +126,10 @@
     background-color: var(--dark-footer);
   }
 
+  .email-status-text{
+    text-align: center;
+  }
+
   @media (max-width: 768px) {
     .footer-content {
       flex-direction: column;
@@ -133,10 +138,6 @@
 
     .footer-content h3 {
       font-size: 1.6rem;
-    }
-
-    .footer-content p {
-      font-size: 1.2rem;
     }
   
     .footer-hours, .footer-contact {
