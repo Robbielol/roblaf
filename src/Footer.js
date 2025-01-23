@@ -10,7 +10,7 @@ const Footer = () => {
 
     const HandleEmail = (value) => {
         setStatus('');
-        setEmail(value);
+        setEmail(value.toLowerCase());
     }
 
     const ValidateEmail = () => {

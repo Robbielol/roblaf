@@ -105,3 +105,25 @@
   .slider.round:before {
     border-radius: 50%;
   }
+
+  @media (max-width: 768px) {
+    .topbar-container {
+      z-index: 111;
+    }
+
+    .topbar-mode-section{
+      padding-left: 3.5em;
+    }
+
+    .resume-button{
+      padding: 0.4em;
+    }
+
+    .slider:before{
+      height: 0.8em;
+      width: 0.8em;
+      bottom: 2px;
+      left: 2px;
+    }
+    
+  }

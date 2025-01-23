@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {Outlet, Link} from "react-router-dom";
 import logo from "./Images/rob-laf-logo.jpg"
 import { FiHome } from "react-icons/fi";
 import { MdWorkOutline } from "react-icons/md";
@@ -10,32 +11,37 @@ const Navigation = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
   
     // Toggle the menu when button is clicked
-    const toggleMenu = () => {
-      setIsMenuOpen(!isMenuOpen);
+    const toggleMenu = (prop) => {
+      setIsMenuOpen(prop);
     };
   
     return (
-      <nav id="navigation-bar" className={`navbar ${isMenuOpen ? 'open' : ''}`}>
-        {/* Hamburger icon or button to trigger the pop-out menu for mobile*/}
-        <button className={`menu-button ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
-          &#9776;
-        </button>
-         {/* Pop-out menu container for mobile*/}
-        <div className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
-          <div className="navbar-logo">
-            <a to="/"><img src ={logo} alt='robert-laffan-logo'/></a>
+      <>
+        <nav id="navigation-bar" className={`navbar ${isMenuOpen ? 'open' : ''}`}>
+          {/* Hamburger icon or button to trigger the pop-out menu for mobile*/}
+          <div>
+            <button className={`menu-button ${isMenuOpen ? 'open' : ''}`} onClick={() => toggleMenu(!isMenuOpen)}>
+              &#9776;
+            </button>
           </div>
-          <div className={`sticky-menu`}>
+          {/* Pop-out menu container for mobile*/}
+          <div className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
+            <div className="navbar-logo">
+              <Link to="/"><img src ={logo} alt='robert-laffan-logo'/></Link>
+            </div>
+            <div className={`sticky-menu`}>
+            </div>
+              <ul className={`nav-list ${isMenuOpen ? 'open' : ''}`} onClick={() => toggleMenu(false)}>
+                <li><Link to='/' ><FiHome size='1.5em'/><h2>Home</h2></Link></li>
+                <li><Link to='/portfolio' ><BsPersonWorkspace size='1.5em'/><h2>Portfolio</h2></Link></li>
+                <li><Link to='/experience' ><MdWorkOutline size='1.5em'/><h2>Experience</h2></Link></li>
+                <li><Link to='/contact'><RiContactsLine size='1.5em'/><h2>Contact</h2></Link></li>
+              </ul>
           </div>
-            <ul className={`nav-list ${isMenuOpen ? 'open' : ''}`}>
-              <li href='/Home'><FiHome size='1.5em'/><a>Home</a></li>
-              <li href='/Portfolio'><BsPersonWorkspace size='1.5em'/><a>Portfolio</a></li>
-              <li href='/Experience'><MdWorkOutline size='1.5em'/><a >Experience</a></li>
-              <li href='/Contact'><RiContactsLine size='1.5em'/><a>Contact</a></li>
-            </ul>
-        </div>
-        {isMenuOpen && <div className="overlay" onClick={toggleMenu}></div>}
-      </nav>
+          {isMenuOpen && <div className="overlay" onClick={() => toggleMenu(!isMenuOpen)}></div>}
+        </nav>
+        <Outlet />
+      </>
     );
   };
   

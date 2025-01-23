@@ -9,6 +9,7 @@
 }
 
 .App {
+  overflow-x: hidden;
   text-align: center;
 }
 
