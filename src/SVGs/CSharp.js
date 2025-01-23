@@ -1,5 +1,5 @@
 import CSharpSVG from "../Images/CSharp.svg";
-import "../pages/Home.css";
+import "../pages/home/Home.css";
 
 const CSharpLogo = (({color, size, className}) => {
     return(

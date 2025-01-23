@@ -1,9 +1,8 @@
-import HeaderBar from "../HeaderBar"
-import Navigation from "../Navigation";
-import Footer from "../Footer";
+import HeaderBar from "../../HeaderBar"
+import Footer from "../../Footer";
 import "./Home.css";
-import profilePic from "../Images/temp-profile.png";
-import Skills from "../skills.json";
+import profilePic from "../../Images/temp-profile.png";
+import Skills from "../../skills.json";
 import { 
     DiReact, 
     DiJava, 
@@ -15,24 +14,24 @@ import {
     DiNodejsSmall 
 } from "react-icons/di";
 import { TbSql } from "react-icons/tb";
-import CSharp from "../SVGs/CSharp"
-import React, { useEffect, useState } from "react";
+import CSharp from "../../SVGs/CSharp"
+import React, { useEffect, useRef, useState } from "react";
 import { SiDotnet } from "react-icons/si";
 
 const HeaderImage = () => {
-    const middleTextDisplay = ["A Web Developer", "A Freelance Developer", "A Backend Developer", "Your Personal Developer"];
+    const middleTextDisplay = ["A Software Developer", "A Web Developer",  "A Freelance Developer", "Your Personal Developer"];
     const [displayTitleDesc, setDisplayTitleDesc] = useState("");
     const [wordIndex, setWordIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
-    let middleTextSplit = '';
+    const middleTextSplit = useRef('');
 
     // Displays the text on the header image on home page]\
     useEffect(() => {
         if(wordIndex < middleTextDisplay.length){
-            middleTextSplit = middleTextDisplay[wordIndex].split('')
+            middleTextSplit.current = middleTextDisplay[wordIndex].split('')
             if (charIndex < middleTextDisplay[wordIndex].length) {
                 const timer = setTimeout(() => {
-                    setDisplayTitleDesc((prev) => prev + middleTextSplit[charIndex]);
+                    setDisplayTitleDesc((prev) => prev + middleTextSplit.current[charIndex]);
                     setCharIndex((prevIndex) => prevIndex + 1);
                 }, 50);
             
@@ -147,7 +146,6 @@ const HomePage = () => {
                 <h2 className="page-title">My Skills & Knowledge</h2>
                 <div> <SkillSection/> </div>
             </div>
-            <Navigation />
             <Footer />
         </>
     );

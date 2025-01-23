@@ -1,7 +1,8 @@
 .header-section {
-    display: grid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     gap: 2em;
-    grid-template-columns: 60% auto;
     margin: 5% 5% 10% 5%;
 }
 
@@ -117,4 +118,85 @@ h2{
 /*Component css*/
 .center-component {
     align-self: center;
+}
+
+@media (max-width: 1080px) {
+    /*Opening Section*/
+    .header-section{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .header-container{
+        padding-top: 3em;
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .middle-text{
+        justify-content: start;
+    }
+
+    .static-text, .dynamic-text{
+        height: 2em;
+    }
+
+    .body-text{
+        width: 80vw;
+        font-size: 0.9em;
+        margin-left: 3em;
+        text-align: justify;
+    }
+
+    .profile-image-container{
+        display: flex;
+        justify-content: center;
+        width: 90vw;
+    }
+
+    .profile-image-container img{
+        width: 90vw;
+        max-width: 500px;
+    }
+    
+    .skills-container {
+        grid-template-columns: repeat(3, 7.5em);
+    }
+    
+    .skill-box{
+        width: 7em;
+    }
+
+    .circular-bar{
+        width: 6em;
+        height: 6em;
+    }
+}
+
+@media (max-width: 768px) {
+    .body-text{
+        margin-left: 0;
+    }
+
+    .middle-text{
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .profile-image-container img{
+        width: 90vw;
+    }
+
+    /*Skills Section*/
+    
+
+    .skill-box{
+        width: 6em;
+    }
+
+    .circular-bar{
+        width: 5em;
+        height: 5em;
+    }
 }
