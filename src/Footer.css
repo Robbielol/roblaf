@@ -1,4 +1,6 @@
 .footer {
+    position: sticky;
+    bottom: 0;
     background-color: var(--light-footer); /* White background */
     padding: 2.5em 1.25em;
     display: flex;

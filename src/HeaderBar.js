@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import SocialMediaLinks from "./SocialMedia";
 import "./HeaderBar.css"
-
+import { RiSunFill, RiMoonFill } from 'react-icons/ri';
 const HeaderBar = () => {
     const [darkMode, setDarkMode] = useState(false);
 

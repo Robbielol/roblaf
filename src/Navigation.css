@@ -110,8 +110,10 @@
 @media (max-width: 768px) {
     .navbar{
         height: 2em;
+        width: 2em;
         display: block;
         z-index: 1000;
+        transition: height 1s, width 1s;
     }
 
     .navbar.open{
@@ -120,10 +122,13 @@
     }
 
     .nav-menu {
+        opacity: 0;
         visibility: hidden;
+        transition: opacity .5s;
     }
 
     .nav-menu.open{
         visibility: visible;
+        opacity: 1;
     }
 }

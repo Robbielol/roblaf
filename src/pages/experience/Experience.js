@@ -1,12 +1,13 @@
 import Footer from "../../Footer";
 import HeaderBar from "../../HeaderBar";
+import Maintenance from "../Error/Maintenance";
 
 const Experience = () => {
 
     return(
         <>
             <HeaderBar />
-            <h1> Experience </h1>
+                <Maintenance name="Experience" />
             <Footer />
         </>
     );
