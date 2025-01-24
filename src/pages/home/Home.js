@@ -19,7 +19,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { SiDotnet } from "react-icons/si";
 
 const HeaderImage = () => {
-    const middleTextDisplay = ["A Software Developer", "A Web Developer",  "A Freelance Developer", "Your Personal Developer"];
     const [displayTitleDesc, setDisplayTitleDesc] = useState("");
     const [wordIndex, setWordIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
@@ -27,6 +26,7 @@ const HeaderImage = () => {
 
     // Displays the text on the header image on home page]\
     useEffect(() => {
+        const middleTextDisplay = ["A Software Developer", "A Web Developer",  "A Freelance Developer", "Your Personal Developer"];
         if(wordIndex < middleTextDisplay.length){
             middleTextSplit.current = middleTextDisplay[wordIndex].split('')
             if (charIndex < middleTextDisplay[wordIndex].length) {
