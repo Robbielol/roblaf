@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useRef, useState, useEffect} from "react";
 import {Outlet, Link} from "react-router-dom";
 import logo from "./Images/rob-laf-logo.jpg"
 import { FiHome } from "react-icons/fi";
@@ -9,15 +9,29 @@ import "./Navigation.css";
 
 const Navigation = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const menuRef = useRef(null);
   
     // Toggle the menu when button is clicked
     const toggleMenu = (prop) => {
       setIsMenuOpen(prop);
     };
+
+    useEffect(() => {
+      function handleClickOutside(event) {
+        if (menuRef.current && !menuRef.current.contains(event.target)) {
+          toggleMenu(false);
+        }
+      }
   
+        document.addEventListener('mousedown', handleClickOutside);
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+      };
+    }, [menuRef]);
+
     return (
       <>
-        <nav id="navigation-bar" className={`navbar ${isMenuOpen ? 'open' : ''}`}>
+        <nav ref={menuRef} id="navigation-bar" className={`navbar ${isMenuOpen ? 'open' : ''}`}>
           {/* Hamburger icon or button to trigger the pop-out menu for mobile*/}
           <div>
             <button className={`menu-button ${isMenuOpen ? 'open' : ''}`} onClick={() => toggleMenu(!isMenuOpen)}>

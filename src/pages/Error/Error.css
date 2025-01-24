@@ -1,4 +1,12 @@
-.Mtn-text{
-    margin-top: 25%;
+.mtn-text{
+    display: flex;
+    margin: 15%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mtn-text h2{
+    text-shadow: none;
     text-align: center;
 }

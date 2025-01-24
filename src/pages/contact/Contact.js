@@ -1,13 +1,13 @@
 import Footer from "../../Footer";
 import HeaderBar from "../../HeaderBar";
-
+import Maintenance from "../Error/Maintenance";
 
 const Contact = () => {
 
     return(
         <>
             <HeaderBar />
-            <h1> Contact </h1>
+                <Maintenance name="Contact" /> 
             <Footer/>
         </>
     );

@@ -1,12 +1,13 @@
 import Footer from "../../Footer";
 import HeaderBar from "../../HeaderBar";
+import Maintenance from "../Error/Maintenance";
 
 const Portfolio = () => {
 
     return(
         <>
             <HeaderBar />
-            <h1> Portfolio </h1>
+                <Maintenance name="Portfolio" />
             <Footer />
         </>
     );

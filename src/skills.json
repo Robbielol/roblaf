@@ -14,7 +14,7 @@
     {
         "Name": "Java",
         "Value": 70,
-        "Component": "DiJava",
+        "Component": "JavaLogo",
         "Color": "#"
     },
     {
@@ -44,7 +44,7 @@
     {
         "Name": "Python",
         "Value": 55,
-        "Component": "DiPython", 
+        "Component": "PythonLogo", 
         "Color": "#FFE873"
     },
     {

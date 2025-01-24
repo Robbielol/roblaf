@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: center;
     gap: 2em;
-    margin: 5% 5% 10% 5%;
+    margin: 10% 5% 10% 5%;
 }
 
 .header-container {
@@ -43,6 +43,40 @@ h2{
 
 .dynamic-text {
     opacity: 1;
+}
+
+.profile-image-wrapper{
+    position: relative;
+    display: inline-block;
+}
+
+.profile-image-wrapper::before,
+.profile-image-wrapper::after {
+    content: '';
+    position: absolute;
+    border: 1.5em solid var(--dark-primary); /* Border thickness and color */
+}
+
+.profile-image-wrapper::before {
+    top: 0;
+    left: 2em;
+    width: 3em; /* Adjust size of the corner border */
+    height: 3em;
+    border-right: none;
+    border-bottom: none;
+}
+
+.profile-image-wrapper::after {
+    bottom: 0;
+    right: 0;
+    width: 3em; /* Adjust size of the corner border */
+    height: 3em;
+    border-left: none;
+    border-top: none;
+}
+
+.profile-image-wrapper img {
+    height: auto;
 }
 
 .skills-container{ 

@@ -5,16 +5,16 @@ import profilePic from "../../Images/temp-profile.png";
 import Skills from "../../skills.json";
 import { 
     DiReact, 
-    DiJava, 
     DiJavascript1, 
     DiHtml5, 
     DiCss3, 
-    DiPython,
     DiGithubBadge,
     DiNodejsSmall 
 } from "react-icons/di";
 import { TbSql } from "react-icons/tb";
-import CSharp from "../../SVGs/CSharp"
+import CSharp from "../../SVGs/CSharp";
+import JavaLogo from "../../SVGs/Java";
+import PythonLogo from "../../SVGs/Python";
 import React, { useEffect, useRef, useState } from "react";
 import { SiDotnet } from "react-icons/si";
 
@@ -74,9 +74,9 @@ const HeaderImage = () => {
                     </p>
                     
                 </div>
-                <button className="center-component">
+                {/*<button className="center-component">
                     Get In Contact Me
-                </button>
+                </button>*/}
             </div>
         </>
 
@@ -86,7 +86,9 @@ const HeaderImage = () => {
 const ProfilePic = () => {     
     return(
         <div className="profile-image-container">
-            <img src={profilePic} alt="profile-image"/>
+            <div className="profile-image-wrapper">
+                <img src={profilePic} alt="profile-image"/>
+            </div>
         </div>
     );
 }
@@ -96,16 +98,17 @@ const SkillSection = () => {
     const iconComponents = {
         DiReact,
         DiJavascript1,
-        DiJava,
+        JavaLogo,
         DiHtml5,
         DiCss3,
         TbSql,
         SiDotnet,
-        DiPython,
+        PythonLogo,
         DiGithubBadge,
         DiNodejsSmall,
         CSharp
     };
+    
     return (
         <div className="section-container">
             <div className="skills-container">
