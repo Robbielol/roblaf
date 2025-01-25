@@ -49,7 +49,7 @@ const HeaderImage = () => {
         } else {
             setDisplayTitleDesc(middleTextDisplay[3]);
         }
-    }, [charIndex, wordIndex, middleTextSplit, middleTextDisplay]);
+    }, [charIndex, wordIndex, middleTextSplit]);
     
     return (
         <>
