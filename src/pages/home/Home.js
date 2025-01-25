@@ -1,7 +1,7 @@
 import HeaderBar from "../../HeaderBar"
 import Footer from "../../Footer";
 import "./Home.css";
-import profilePic from "../../Images/temp-profile.png";
+import profilePic from "../../Images/RobProfile.png";
 import Skills from "../../skills.json";
 import { 
     DiReact, 
