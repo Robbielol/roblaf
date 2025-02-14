@@ -169,7 +169,7 @@ const AboutText = ({display}) => {
     const [displayAboutText, setDisplayAboutText] = useState("");
     const [charIndex, setCharIndex] = useState(0);
     const aboutText = "I am a software engineer with over 3 years of professional experience. I have expertise in many skills and technologies, " +
-                "you can view these below. I have a creative mind and a strong work ethic, allowing me to design, develop and test efficient " +
+                "and offer a range of services that can be seen below. I have a creative mind and a strong work ethic, allowing me to design, develop and test efficient " +
                 "and engaging applications, delivering the results you dream of. " + 
                 "I am also committed to constant and clear communication and collaboration between myself my co-workers and clients, "+ 
                 " making sure your project runs smoothly. I’m eager to support your goals with high-quality work that drives success! "+ 
