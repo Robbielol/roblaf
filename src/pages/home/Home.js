@@ -2,21 +2,7 @@ import HeaderBar from "../../HeaderBar"
 import Footer from "../../Footer";
 import "./Home.css";
 import profilePic from "../../Data/Images/RobProfile.png";
-import Skills from "../../skills.json";
-import { 
-    DiReact, 
-    DiJavascript1, 
-    DiHtml5, 
-    DiCss3, 
-    DiGithubBadge,
-    DiNodejsSmall 
-} from "react-icons/di";
-import { TbSql } from "react-icons/tb";
-import CSharp from "../../SVGs/CSharp";
-import JavaLogo from "../../SVGs/Java";
-import PythonLogo from "../../SVGs/Python";
 import React, { useEffect, useRef, useState } from "react";
-import { SiDotnet } from "react-icons/si";
 import Portfolio from "../portfolio/Portfolio";
 import Services from "../../Services";
 import ContactButton from "../../Buttons";
@@ -122,11 +108,11 @@ const HeaderImage = ({setTextFunc, displayText, aboutSectionRef}) => {
                         Struggling with outdated designs, slow performance, or missing features?<br/>
                         Looking to bring a adept software engineer into your team? <br/>
                         I specialize in building custom websites and applications that are fast, modern, and tailored to your business needs.<br/>
-                        <ul>
-                            <li>New Website or Application – Designed from scratch for maximum impact.</li>
-                            <li>Enhancements & Fixes – Add, edit, or optimize content and features.</li>
-                            <li>Speed & Performance – Improve loading times and user experience.</li>
-                        </ul>
+                                             
+                        New Website or Application – Designed from scratch for maximum impact.
+                        Enhancements & Fixes – Add, edit, or optimize content and features.
+                        Speed & Performance – Improve loading times and user experience.
+                                              
                         Let's bring your vision to life! Click the button to get in contact  with me today.
                     </p>
                 </div>
@@ -203,15 +189,7 @@ const AboutText = ({display}) => {
     );
 }
 
-const KnowledgeBar = ({ progress, IconComponent, color }) => {
-    return (
-        <div className="circular-bar">
-            <div className="progress-circle" style={{ '--progress': progress }}>
-                <IconComponent color={color} size="100" className="center-image" />
-            </div>
-        </div>
-    );
-};
+
 
 const HomePage = () => {
     const [displayAboutText, setDisplayAboutText] = useState(false);
