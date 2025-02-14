@@ -1,4 +1,3 @@
-import React, { useState, useRef } from "react";
 import Skills from "../../skills.json";
 import { 
     DiReact, 

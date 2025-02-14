@@ -1,7 +1,4 @@
 import axios from 'axios';
-import Footer from "../../Footer";
-import HeaderBar from "../../HeaderBar";
-import Maintenance from "../Error/Maintenance";
 import clientList from "../../Data/JSON/clients.json";
 import './Portfolio.css'
 import { useState } from 'react';
