@@ -1,4 +1,4 @@
-import PythonSVG from "../Images/SVGs/Python.svg";
+import PythonSVG from "../Data/Images/SVGs/Python.svg";
 import "../pages/home/Home.css";
 
 const PythonLogo = (({color, size, className}) => {

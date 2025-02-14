@@ -1,6 +1,6 @@
 import React, {useRef, useState, useEffect} from "react";
 import {Outlet, Link} from "react-router-dom";
-import logo from "./Images/rob-laf-logo.jpg"
+import logo from "./Data/Images/rob-laf-logo.jpg"
 import { FiHome } from "react-icons/fi";
 import { MdWorkOutline } from "react-icons/md";
 import { BsPersonWorkspace } from "react-icons/bs";
@@ -47,7 +47,7 @@ const Navigation = () => {
             </div>
               <ul className={`nav-list ${isMenuOpen ? 'open' : ''}`} onClick={() => toggleMenu(false)}>
                 <li><Link to='/' ><FiHome size='1.5em'/><h2>Home</h2></Link></li>
-                <li><Link to='/portfolio' ><BsPersonWorkspace size='1.5em'/><h2>Portfolio</h2></Link></li>
+                <li><Link to='/knowledgebase' ><BsPersonWorkspace size='1.5em'/><h2>Knowledgebase</h2></Link></li>
                 <li><Link to='/experience' ><MdWorkOutline size='1.5em'/><h2>Experience</h2></Link></li>
                 <li><Link to='/contact'><RiContactsLine size='1.5em'/><h2>Contact</h2></Link></li>
               </ul>

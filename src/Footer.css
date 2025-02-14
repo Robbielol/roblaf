@@ -72,7 +72,7 @@
   
   .footer-content h3 {
     text-align: left;
-    margin-bottom: 0.8em;
+    margin-bottom: 0.4em;
     font-size: 1.2rem;
     color: var(--light-secondary);
   }
@@ -129,6 +129,11 @@
     text-align: center;
   }
 
+  .footer-mobile-align{
+    display: flex;
+    flex-direction: row;
+  }
+
   @media (max-width: 1080px) {
     .footer-container{
       padding: 0;
@@ -151,6 +156,11 @@
 
     .footer-logo{
       flex-direction: column;
+    }
+
+    .footer-mobile-align{
+      flex-direction: column;
+      align-items: flex-start;
     }
   
     .footer-hours, .footer-contact {

@@ -1,4 +1,4 @@
-import logo from "./Images/rob-laf-logo-trans.png";
+import logo from "./Data/Images/rob-laf-logo-trans.png";
 import "./Footer.css";
 import axios from 'axios';
 import { useState } from "react";
@@ -40,7 +40,6 @@ const Footer = () => {
             console.error(error);
             setStatus('An error occurred while sending the message.');
         }
-       
     }
 
     return (
@@ -54,20 +53,20 @@ const Footer = () => {
                             <h2>Making & Maintaining<br/> Your Dream Website.</h2>
                         </div>
                     </div>
+                    <div className="footer-mobile-align">
+                        <div className="footer-menu">
+                            <h3>Contact Links</h3>
+                            <p><a href="https://www.instagram.com/robertlaffan/">Instagram</a></p>
+                            <p><a href="https://www.linkedin.com/in/robert-laffan-5a82a9141/">LinkedIn</a></p>
+                            <p><a href="mainlto:laffanrobert4@gmail.com">Email</a></p>
+                        </div>
 
-                    <div className="footer-menu">
-                        <h3>Contact Links</h3>
-                        <p><a href="https://www.instagram.com/robertlaffan/">Instagram</a></p>
-                        <p><a href="https://www.linkedin.com/in/robert-laffan-5a82a9141/">LinkedIn</a></p>
-                        <p><a href="laffanrobert4@gmail.com">Email Me</a></p>
+                        <div className="footer-menu">
+                            <h3>Previous Work</h3>
+                            <p><a href="https://github.com/Robbielol/">GitHub</a></p>
+                            <p><a href="/portfolio">Portfolio</a></p>
+                        </div>
                     </div>
-
-                    <div className="footer-menu">
-                        <h3>Previous Work</h3>
-                        <p><a href="https://github.com/Robbielol/">GitHub</a></p>
-                        <p><a href="/portfolio">Portfolio</a></p>
-                    </div>
-
                     <div className="footer-menu">
                         <h3>Get Updates</h3>
                         <form onSubmit={RegisterEmail} className="sign-up-form">
