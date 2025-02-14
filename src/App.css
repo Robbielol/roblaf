@@ -61,6 +61,6 @@ button:hover{
 }
 
 p{
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   letter-spacing: 1px;
 }
