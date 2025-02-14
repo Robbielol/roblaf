@@ -55,12 +55,6 @@ h2 {
     font-size: 0.9em;
 }
 
-.services-text li{
-    margin-bottom: 0.2em;
-    list-style-type:disc;
-    transition: border-left-width 0.5s;
-}
-
 .dynamic-text {
     opacity: 0;
     transition: opactity 1s;
@@ -311,6 +305,12 @@ h2 {
         align-items: center;
         flex-direction: row;
     }
+
+    .services-text{
+        text-align: justify;
+        padding: 0 1em;
+    }
+
 
     .profile-image-container{
         margin: 0;
