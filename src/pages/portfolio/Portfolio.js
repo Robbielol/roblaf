@@ -29,6 +29,7 @@ const UpdateClientData = async (e) => {
             filePath: filePath, 
             data: clientList
         });
+        console.log(response.status)
     } catch (error) {
         console.error('Error saving file:', error);
     }
