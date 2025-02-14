@@ -117,7 +117,6 @@ const Portfolio = () => {
 
     return(
         <>
-            <Analytics />
             <PortfolioGrid />
         </>
     )

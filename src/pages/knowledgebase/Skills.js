@@ -1,3 +1,20 @@
+import React, { useState, useRef } from "react";
+import Skills from "../../skills.json";
+import { 
+    DiReact, 
+    DiJavascript1, 
+    DiHtml5, 
+    DiCss3, 
+    DiGithubBadge,
+    DiNodejsSmall 
+} from "react-icons/di";
+import { TbSql } from "react-icons/tb";
+import CSharp from "../../SVGs/CSharp";
+import JavaLogo from "../../SVGs/Java";
+import PythonLogo from "../../SVGs/Python";
+import { SiDotnet } from "react-icons/si";
+import HeaderBar from "../../HeaderBar";
+import Footer from "../../Footer";
 
 const SkillSection = () => {
     const iconComponents = {
@@ -32,3 +49,26 @@ const SkillSection = () => {
         </div>
     );
 }
+
+const KnowledgeBar = ({ progress, IconComponent, color }) => {
+    return (
+        <div className="circular-bar">
+            <div className="progress-circle" style={{ '--progress': progress }}>
+                <IconComponent color={color} size="100" className="center-image" />
+            </div>
+        </div>
+    );
+};
+
+const Knowledgebase = () => {
+
+    return(
+        <>
+            <HeaderBar />
+            <SkillSection />
+            <Footer/>
+        </>
+    );
+}
+
+export default Knowledgebase;

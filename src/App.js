@@ -4,7 +4,7 @@ import Navigation from './Navigation';
 import Contact from './pages/contact/Contact';
 import Experience from './pages/experience/Experience';
 import HomePage from './pages/home/Home';
-import Portfolio from './pages/portfolio/Portfolio';
+import Knowledgebase from './pages/knowledgebase/Skills';
 function App() {
   
 
@@ -15,10 +15,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigation />}>
             <Route index element={<HomePage />} />
-            <Route path="portfolio" element={<Portfolio />} />
+            <Route path="knowledgebase" element={<Knowledgebase />} />
             <Route path="experience" element={<Experience />} />
             <Route path="contact" element={<Contact />} />
-            <Route path="*" element='' />
+            <Route path="*" element={<HomePage />} />
           </Route>
         </Routes>
       </BrowserRouter>
