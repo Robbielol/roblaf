@@ -2,7 +2,7 @@ import './Services.css'
 import { useState, useEffect } from 'react';
 
 const SingleService = ({title, description}) => {
-    const [isExpanded, setIsExpanded] = useState(true);
+    const [isExpanded, setIsExpanded] = useState(false);
     const mobileView = 768;
     const handleToggle = () => {
         setIsExpanded(!isExpanded);
@@ -17,7 +17,7 @@ const SingleService = ({title, description}) => {
         
         // Cleanup the event listener on unmount
         return () => window.removeEventListener("resize", handleResize);
-    }, [])
+    }, []);
 
     return (
         <div className="service-card">
