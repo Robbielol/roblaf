@@ -1,9 +1,18 @@
+.header-background {
+    background-image: url(../../Data/Images/Computer-Science-Background.jpg);
+    background-color: var(--light-primary); /* Adjust color and opacity */
+    background-blend-mode: overlay;
+    background-position: center;
+    background-size: contain;
+}
+
+
 .header-section {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 2em;
-    margin: 10% 5% 10% 5%;
+    margin: 10% 5% 5% 5%;
 }
 
 .header-container {
@@ -22,7 +31,7 @@
     padding: 0;
 }
 
-h2{
+h1{
     font-size: 1.2em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     font-weight: 500;
@@ -31,9 +40,25 @@ h2{
     margin-bottom: 0.5em;
 }
 
-.body-text {
+h2 {
+    font-size: 1.2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: 500;
     text-align: start;
-    font-size: 0.8em;
+    margin-block: 0;
+    margin-bottom: 0.5em;
+}
+
+.services-text{
+    text-align: start;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+.services-text li{
+    margin-bottom: 0.2em;
+    list-style-type:disc;
+    transition: border-left-width 0.5s;
 }
 
 .dynamic-text {
@@ -79,12 +104,51 @@ h2{
     height: auto;
 }
 
+.body-text {
+    display: none;
+}
+
+.body-text.show {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 0.8em;
+    margin: 0 5em;
+    padding: 3em 0;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 80%;
+    margin-left: 2em;
+    text-align: start;
+}
+
+.display-about-text {
+    min-height: 10em;
+    height: fit-content;
+}
+
+
+
+.skills-filter-wrapper{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
 .skills-container{ 
     display: grid;
     align-content: space-evenly;
     justify-content: center;
     grid-template-columns: auto auto auto auto;
     gap: 0.5em;
+    background-color: var(--light-secondary);
+    padding: 1em;
+    box-shadow: inset 0 0 0.5em;
+    border-radius: 1em;
     margin: 5% 5% 10% 5%;
 }
 
@@ -126,7 +190,7 @@ h2{
     height: 100%;
     background: conic-gradient(
       var(--light-secondary) calc(var(--progress) * 1%), /* Highlighted progress */
-      #ddd 0% /* Remaining area */
+      #959595 0% /* Remaining area */
     );
     border-radius: 50%; /* Make it circular */
     display: flex;
@@ -149,10 +213,15 @@ h2{
     background-color: var(--dark-footer);
   }
 
-/*Component css*/
-.center-component {
-    align-self: center;
-}
+    /*Component css*/
+    .center-component {
+        margin: 1em;
+        align-self: center;
+    }
+
+    .center-component:hover{
+        opacity: 0.5;
+    }
 
 @media (max-width: 1080px) {
     /*Opening Section*/
@@ -162,23 +231,28 @@ h2{
     }
 
     .header-container{
-        padding-top: 3em;
+        padding: 3em 0 0 2em;
         margin-left: 0;
         align-items: center;
+        font-size: 1.3em;
+
     }
 
     .middle-text{
-        justify-content: start;
+        width: 110%;
+        justify-content: center;
+        font-size: 1.2em;
     }
 
     .static-text, .dynamic-text{
         height: 2em;
     }
 
-    .body-text{
+    .body-text.show{
         width: 80vw;
         font-size: 0.9em;
-        margin-left: 3em;
+        margin: 0 5em;
+        padding-top: 0;
         text-align: justify;
     }
 
@@ -186,11 +260,21 @@ h2{
         display: flex;
         justify-content: center;
         width: 90vw;
+        margin-left: 2em;
     }
 
     .profile-image-container img{
-        width: 90vw;
-        max-width: 500px;
+        width: 50vw;
+        max-width: 450px;
+    }
+
+    .services-text{
+        text-align: center;
+        padding: 0 1.5em 0 0;
+    }
+
+    .display-about-text{
+        margin: 0;
     }
     
     .skills-container {
@@ -208,14 +292,29 @@ h2{
 }
 
 @media (max-width: 768px) {
-    .body-text{
-        margin-left: 0;
+
+    .header-container{
+        padding: 1em 0;
+    }
+
+    .body-text.show{
+        margin: 0 3em;
+        text-align: center;
+    }
+
+    .about-text{
+        margin: 0;
     }
 
     .middle-text{
         flex-wrap: wrap;
         align-items: center;
-        flex-direction: column;
+        flex-direction: row;
+    }
+
+    .profile-image-container{
+        margin: 0;
+        padding-bottom: 1em;
     }
 
     .profile-image-container img{
@@ -223,7 +322,9 @@ h2{
     }
 
     /*Skills Section*/
-    
+    .skills-container{
+        grid-template-columns: repeat(3, 6em);
+    }
 
     .skill-box{
         width: 6em;

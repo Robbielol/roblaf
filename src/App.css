@@ -30,7 +30,7 @@
 .text-style{
   font-size: 1em;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
   display: inline;
   color: var(--light-secondary);
 }
@@ -40,15 +40,16 @@
 }
 
 button{
+  cursor: pointer;
   padding: 0.5em 1em;
   border-radius: 0.5em;
   border-color: var(--light-secondary);
   border-width: 0.3em;
   border-style: solid;
-  background-color: #282c3400;
+  background-color: var(--light-secondary);
   font-weight: 500;
   font-size: 0.8em;
-  color: var(--dark-text); 
+  color: var(--light-text); 
 }
 
 button.dark-mode{
@@ -56,5 +57,10 @@ button.dark-mode{
 }
 
 button:hover{
-  background-color: var(--light-secondary);
+  color: var(--light-text);
+}
+
+p{
+  font-family: 'Roboto';
+  letter-spacing: 1px;
 }

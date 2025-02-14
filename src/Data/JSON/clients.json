@@ -1,0 +1,24 @@
+[
+  {
+    "displayName": "Stonehands Moving",
+    "clientName": "stone-hands-moving",
+    "websiteUrl": "www.stonehandsmoving.com",
+    "logoPath": "/ClientImages/stoneHandsMovingLogo.png",
+    "language": "JavaScript",
+    "description": "This is the most trusted moving company in Vancouver, Canda with a five-star rating. They offer a full range of moving services. Their website has played a key role in their growth, making it easy for customers to get quotes, book services and understand the company. The website helps build trust and ensures a smooth booking process.",
+    "createdDate": "10/24/2024"
+  },
+  {
+    "displayName": "Umbrella Landscaping",
+    "clientName": "Umbrella-Landscaping",
+    "logoPath": "/ClientImages/umbrella-landscaping.jpg",
+    "websiteUrl": "www.umbrellalandscaping.com",
+    "description": "Umbrella Landscaping is a reputable company based in the Greater Vancouver Area, specializing in services for strata, commercial, and private properties. Their comprehensive offerings include landscape and hardscape design, installation, and maintenance. Their website provides detailed information about their services, making it easy for potential clients to understand their capabilities and get in touch.",
+    "createdDate": "/09/08/2021",
+    "language": [
+      "WordPress",
+      "CSS",
+      "HTML"
+    ]
+  }
+]

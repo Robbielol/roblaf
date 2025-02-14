@@ -1,4 +1,4 @@
-import JavaSVG from "../Images/SVGs/Java.svg";
+import JavaSVG from "../Data/Images/SVGs/Java.svg";
 import "../pages/home/Home.css";
 
 const JavaLogo = (({color, size, className}) => {

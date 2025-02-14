@@ -76,6 +76,7 @@
     align-items: center;
     gap: 1em;
     padding: 1em 2em;
+    text-decoration: none;
 }
 
 .nav-list li{
@@ -94,17 +95,13 @@
 .nav-menu h2{
     visibility: hidden;
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity .5s;
     margin-bottom: 0;
 }
 
 .nav-menu.open h2 {
     visibility: visible;
     opacity: 1;
-}
-
-.nav-list li h2 {
-    text-decoration: none;
 }
 
 @media (max-width: 768px) {
