@@ -6,17 +6,6 @@ import clientList from "../../Data/JSON/clients.json";
 import './Portfolio.css'
 import { useState } from 'react';
 
-const Portfolio = () => {
-
-    return(
-        <>
-            <HeaderBar />
-                <Maintenance name="Portfolio" />
-            <Footer />
-        </>
-    );
-}
-
 const UpdateClientData = async (e) => {
     //e.preventDefault();
     const filePath = "../src/Data/JSON/clients.json";
@@ -46,11 +35,6 @@ const UpdateClientData = async (e) => {
     } catch (error) {
         console.error('Error saving file:', error);
     }
-}
-
-const Analytics = () => {
-    // Get Data from google analytics
-    // Show differece in contact
 }
 
 const PortfolioGrid = () => {
@@ -129,7 +113,7 @@ const PortfolioGrid = () => {
 
 
 
-const RealPortfolio = () => {
+const Portfolio = () => {
 
     return(
         <>
@@ -139,4 +123,4 @@ const RealPortfolio = () => {
     )
 }
 
-export default RealPortfolio;
+export default Portfolio;
