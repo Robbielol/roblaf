@@ -2,7 +2,7 @@ import './Services.css'
 import { useState, useEffect } from 'react';
 
 const SingleService = ({title, description}) => {
-    const [isExpanded, setIsExpanded] = useState(false);
+    const [isExpanded, setIsExpanded] = useState(true);
     const mobileView = 768;
     const handleToggle = () => {
         setIsExpanded(!isExpanded);

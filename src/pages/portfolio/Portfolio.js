@@ -1,7 +1,7 @@
 import axios from 'axios';
 import clientList from "../../Data/JSON/clients.json";
 import './Portfolio.css'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const UpdateClientData = async (e) => {
     //e.preventDefault();
@@ -44,8 +44,10 @@ const PortfolioGrid = () => {
         createdDate: '',
         language: ''
     });
-
-    UpdateClientData();
+    useEffect(() => {
+        console.log('here');
+        UpdateClientData();
+    }, []);
 
     const ToggleDetails = (index, client) => {
         setSelectedClientIndex(selectedClientDIndex === index ? null : index);
