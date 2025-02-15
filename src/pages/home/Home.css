@@ -1,11 +1,10 @@
 .header-background {
     background-image: url(../../Data/Images/Computer-Science-Background.jpg);
     background-color: var(--light-primary); /* Adjust color and opacity */
-    background-blend-mode: overlay !important;
+    background-blend-mode: soft-light;
     background-position: center;
     background-size: contain;
 }
-
 
 .header-section {
     display: flex;
