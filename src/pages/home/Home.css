@@ -1,7 +1,5 @@
 .header-background {
-    background-image: url(../../Data/Images/Computer-Science-Background.jpg);
-    background-color: var(--light-primary); /* Adjust color and opacity */
-    background-blend-mode: soft-light;
+    background-image: var(--background-image-color);
     background-position: center;
     background-size: contain;
 }
@@ -249,6 +247,12 @@ h2 {
         text-align: justify;
     }
 
+    .display-about-text {
+        min-height: 20em;
+        height: fit-content;
+        margin: 0;
+    }
+
     .profile-image-container{
         display: flex;
         justify-content: center;
@@ -264,10 +268,6 @@ h2 {
     .services-text{
         text-align: center;
         padding: 0 1.5em 0 0;
-    }
-
-    .display-about-text{
-        margin: 0;
     }
     
     .skills-container {
@@ -302,12 +302,17 @@ h2 {
     .middle-text{
         flex-wrap: wrap;
         align-items: center;
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .services-text{
         text-align: justify;
         padding: 0 1em;
+    }
+
+    .display-about-text {
+        min-height: 30em;
+        height: fit-content;
     }
 
 

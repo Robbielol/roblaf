@@ -45,7 +45,6 @@ const PortfolioGrid = () => {
         language: ''
     });
     useEffect(() => {
-        console.log('here');
         UpdateClientData();
     }, []);
 
