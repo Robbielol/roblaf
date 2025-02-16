@@ -1,4 +1,5 @@
 :root{
+  --background-image-color: url(../src/Data/Images/Invert-Computer-Science-Background.png);
   --light-primary: rgb(218, 218, 218);
   --light-secondary: rgb(0, 106, 139);
   --light-footer: rgb(48, 48, 50);

@@ -1,16 +1,20 @@
 import { useEffect, useState } from 'react';
 import SocialMediaLinks from "./SocialMedia";
-import "./HeaderBar.css"
+import "./HeaderBar.css";
+import "./pages/home/Home";
+import invertBackgroundImage from './Data/Images/Invert-Computer-Science-Background.png';
+import backgroundImage from './Data/Images/Computer-Science-Background.jpg';
 //import { RiSunFill, RiMoonFill } from 'react-icons/ri';
 const HeaderBar = () => {
     const [darkMode, setDarkMode] = useState(false);
 
-    const ChangeColorMode = (primaryColor, secondaryColor, darkText, lightText) => {
+    const ChangeColorMode = (primaryColor, secondaryColor, darkText, lightText, backgroundImage) => {
         document.documentElement.style.setProperty('--light-primary', primaryColor);
         document.documentElement.style.setProperty('--dark-primary', secondaryColor);
         document.documentElement.style.setProperty('--dark-text',  darkText);
         document.documentElement.style.setProperty('--light-text', lightText);
         document.documentElement.style.setProperty('--light-footer', secondaryColor);
+        document.documentElement.style.setProperty('--background-image-color', backgroundImage);
     }
 
     const SwitchMode = () => {
@@ -19,9 +23,11 @@ const HeaderBar = () => {
 
     useEffect(() => {
         if(darkMode){
-            ChangeColorMode('rgb(48, 48, 50)', 'rgb(218, 218, 218)', '#fff', '#000')
+            console.log(`url(${backgroundImage})`)
+            ChangeColorMode('rgb(48, 48, 50)', 'rgb(218, 218, 218)', '#fff', '#000', `url(${backgroundImage})`)
         }else{
-            ChangeColorMode('rgb(218, 218, 218)', 'rgb(48, 48, 50)', '#000', '#fff')
+            ChangeColorMode('rgb(218, 218, 218)', 'rgb(48, 48, 50)', '#000', '#fff', `url(${invertBackgroundImage})`)
+            document.querySelector('.services-text').style.fontWeight = '600';
         }
     }, [darkMode]);
 
