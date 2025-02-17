@@ -7,7 +7,10 @@ const axios = require("axios");
 
 
 const app = express();
+app.use(cors());
 app.use(express.json());
+
+app.use(cors({ origin: 'https://www.robertlaffan.com' }));
 
 app.post("/api/add-email", async (req, res) => {
   const { email } = req.body;

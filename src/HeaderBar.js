@@ -27,7 +27,6 @@ const HeaderBar = () => {
             ChangeColorMode('rgb(48, 48, 50)', 'rgb(218, 218, 218)', '#fff', '#000', `url(${backgroundImage})`)
         }else{
             ChangeColorMode('rgb(218, 218, 218)', 'rgb(48, 48, 50)', '#000', '#fff', `url(${invertBackgroundImage})`)
-            document.querySelector('.services-text').style.fontWeight = '600';
         }
     }, [darkMode]);
 
