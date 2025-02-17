@@ -28,7 +28,7 @@ const Footer = () => {
         e.preventDefault();
         try{
             if (ValidateEmail()) {
-                const response = await axios.post("/api/add-email", {email})
+                const response = await axios.post("https://roblaf.onrender.com/api/add-email", {email})
                 if (response.data === "Email added successfully") {
                     setEmail('');
                 }
