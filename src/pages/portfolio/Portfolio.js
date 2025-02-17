@@ -11,7 +11,7 @@ const UpdateClientData = async (e) => {
     try {
         const updatedPromises = clientList.map(async (client) => {
             if(Object.keys(client).length < 7){
-                return axios.put(`${BKACEND_URL}/api/get-project-data`, { client })
+                return axios.put(`${process.env.REACT_APP_BACKEND_URL}/api/get-project-data`, { client })
                     .then(response => { console.log("Axios response:", response);
                         return response.data; // return the response object from axios
                     })
@@ -25,7 +25,7 @@ const UpdateClientData = async (e) => {
         
         const updatedclientList = await Promise.all(updatedPromises);
         clientList = updatedclientList; 
-        const response = await axios.post('/api/write-to-file', {
+        const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/write-to-file`, {
             filePath: filePath, 
             data: clientList
         });
