@@ -11,7 +11,7 @@ const UpdateClientData = async (e) => {
     try {
         const updatedPromises = clientList.map(async (client) => {
             if(Object.keys(client).length < 7){
-                return axios.put("/api/get-project-data", { client })
+                return axios.put("https://roblaf.onrender.com/api/get-project-data", { client })
                     .then(response => { console.log("Axios response:", response);
                         return response.data; // return the response object from axios
                     })
