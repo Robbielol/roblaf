@@ -30,6 +30,7 @@
   font-size: 1.2em;
   font-style: italic;
   display: inline;
+  text-shadow: 4px 4px 4px var(--light-primary);
   color: var(--light-secondary);
 }
 

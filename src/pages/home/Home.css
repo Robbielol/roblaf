@@ -25,12 +25,12 @@
     color: var(--light-secondary); /* Adjust color based on your image */
     font-size: 1.3em;
     font-weight: 700;
+    text-shadow: 4px 4px 4px var(--light-primary);
     padding: 0;
 }
 
 h1, h2{
     font-size: 1.2em;
-    text-shadow: 4px 4px 4px var(--light-primary);
     text-align: start;
     margin-block: 0;
     margin-bottom: 0.5em;
