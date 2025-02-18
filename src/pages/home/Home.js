@@ -108,11 +108,11 @@ const HeaderImage = ({setTextFunc, displayText, aboutSectionRef}) => {
                         Struggling with outdated designs, slow performance, or missing features?<br/>
                         Looking to bring a adept software engineer into your team? <br/>
                         I specialize in building custom websites and applications that are fast, modern, and tailored to your business needs.<br/>
-                                             
-                        New Website or Application – Designed from scratch for maximum impact.
-                        Enhancements & Fixes – Add, edit, or optimize content and features.
-                        Speed & Performance – Improve loading times and user experience.
-                                              
+                        <br/>                   
+                        New Website or Application – Designed from scratch for maximum impact.<br/>
+                        Enhancements & Fixes – Add, edit, or optimize content and features.<br/>
+                        Speed & Performance – Improve loading times and user experience.<br/>
+                        <br/>
                         Let's bring your vision to life! Click the button to get in contact  with me today.
                     </p>
                 </div>

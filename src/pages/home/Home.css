@@ -294,9 +294,13 @@ h1, h2{
         flex-direction: column;
     }
 
+    .dynamic-text{
+        text-align: center;
+    }
+
     .services-text{
         text-align: justify;
-        padding: 0 1em;
+        padding: 1em 1em;
     }
 
     .display-about-text {
