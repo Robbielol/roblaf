@@ -8,13 +8,14 @@ import backgroundImage from './Data/Images/Computer-Science-Background.jpg';
 const HeaderBar = () => {
     const [darkMode, setDarkMode] = useState(false);
 
-    const ChangeColorMode = (primaryColor, secondaryColor, darkText, lightText, backgroundImage) => {
+    const ChangeColorMode = (primaryColor, secondaryColor, darkText, lightText, backgroundImage, shadowColor) => {
         document.documentElement.style.setProperty('--light-primary', primaryColor);
         document.documentElement.style.setProperty('--dark-primary', secondaryColor);
         document.documentElement.style.setProperty('--dark-text',  darkText);
         document.documentElement.style.setProperty('--light-text', lightText);
         document.documentElement.style.setProperty('--light-footer', secondaryColor);
         document.documentElement.style.setProperty('--background-image-color', backgroundImage);
+        document.documentElement.style.setProperty('--primary-shadow', shadowColor);
     }
 
     const SwitchMode = () => {
@@ -23,9 +24,9 @@ const HeaderBar = () => {
 
     useEffect(() => {
         if(darkMode){
-            ChangeColorMode('rgb(48, 48, 50)', 'rgb(218, 218, 218)', '#fff', '#000', `url(${backgroundImage})`)
+            ChangeColorMode('rgb(48, 48, 50)', 'rgb(218, 218, 218)', '#fff', '#000', `url(${backgroundImage})`, '48, 48, 50')
         }else{
-            ChangeColorMode('rgb(218, 218, 218)', 'rgb(48, 48, 50)', '#000', '#fff', `url(${invertBackgroundImage})`)
+            ChangeColorMode('rgb(218, 218, 218)', 'rgb(48, 48, 50)', '#000', '#fff', `url(${invertBackgroundImage})`, '218, 218, 218')
         }
     }, [darkMode]);
 

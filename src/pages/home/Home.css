@@ -38,8 +38,14 @@ h1, h2{
 
 .services-text{
     text-align: start;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.9em;
+}
+
+.text-background {
+    background-color: rgba(var(--primary-shadow), 0.3);
+    padding: 1em;
+    border-radius: 2em;
 }
 
 .dynamic-text {
@@ -49,6 +55,14 @@ h1, h2{
 
 .dynamic-text {
     opacity: 1;
+}
+
+.mobile-profile-picture {
+    display: none;
+}
+
+.desktop-profile-image{
+    display: block;
 }
 
 .profile-image-wrapper{
@@ -108,7 +122,6 @@ h1, h2{
 }
 
 .display-about-text {
-    font-weight: 600;
     min-height: 8em;
     height: fit-content;
 }
@@ -274,7 +287,6 @@ h1, h2{
 }
 
 @media (max-width: 768px) {
-
     .header-container{
         padding: 1em 0;
     }
@@ -298,9 +310,18 @@ h1, h2{
         text-align: center;
     }
 
+    .mobile-profile-picture {
+        display: inline-block;
+    }
+
+    .desktop-profile-image{
+        display: none;
+    }
+
     .services-text{
-        text-align: justify;
+        text-align: start;
         padding: 1em 1em;
+        font-weight: 400;
     }
 
     .display-about-text {
