@@ -1,5 +1,6 @@
 .portfolio-wrapper{
     padding: 3em 0 3em 5em;
+    background-color: var(--light-primary);
 }
 
 .portfolio-title{
