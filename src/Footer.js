@@ -28,7 +28,7 @@ const Footer = () => {
         e.preventDefault();
         try{
             if (ValidateEmail()) {
-                const response = await axios.post(`${process.env.REACT_APP_BKACEND_URL}/api/add-email`, {email})
+                const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/add-email`, {email})
                 if (response.data === "Email added successfully") {
                     setEmail('');
                 }
@@ -56,7 +56,6 @@ const Footer = () => {
                     <div className="footer-mobile-align">
                         <div className="footer-menu">
                             <h3>Contact Links</h3>
-                            <p><a href="https://www.instagram.com/robertlaffan/">Instagram</a></p>
                             <p><a href="https://www.linkedin.com/in/robert-laffan-5a82a9141/">LinkedIn</a></p>
                             <p><a href="mainlto:laffanrobert4@gmail.com">Email</a></p>
                         </div>

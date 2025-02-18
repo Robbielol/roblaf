@@ -89,7 +89,7 @@
     border-radius: 1em;
     font-size: 0.8em;
     opacity: 0;
-    transition: opacity 1s 1s;
+    transition: opacity 0.5s 0.8s;
 }
 
 .client-information.show{
@@ -177,7 +177,5 @@
     .big-client-box.show {
         height: 24em;
     }
-
-    
 }
 
