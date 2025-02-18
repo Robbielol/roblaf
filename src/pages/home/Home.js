@@ -102,8 +102,11 @@ const HeaderImage = ({setTextFunc, displayText, aboutSectionRef}) => {
                         <h1>{displayTitleDesc}</h1>
                     </div>
                 </div>
+                <div className="mobile-profile-picture">
+                    <ProfilePic/>
+                </div>
                 <div>
-                    <p className="services-text">
+                    <p className="services-text text-background">
                         Need a high-performing website or app?<br/>
                         Struggling with outdated designs, slow performance, or missing features?<br/>
                         Looking to bring a adept software engineer into your team? <br/>
@@ -181,7 +184,7 @@ const AboutText = ({display}) => {
     return (
         <div className="about-text">
             <h2 className="services-heading">More About Me</h2>
-            <p className="display-about-text">
+            <p className="display-about-text text-background">
                 {displayAboutText}
             </p>
             <ContactButton />
@@ -205,7 +208,9 @@ const HomePage = () => {
                         displayText={displayAboutText}
                         aboutSectionRef={aboutSectionRef}
                     />
-                    <ProfilePic />
+                    <div className='desktop-profile-image'>
+                        <ProfilePic />
+                    </div>
                 </div>
                 <div ref={aboutSectionRef} className={`body-text ${displayAboutText ? "show" : "" }`}>           
                     <AboutText display={displayAboutText}/>
