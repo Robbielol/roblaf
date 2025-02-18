@@ -294,7 +294,7 @@ h1, h2{
         flex-direction: column;
     }
 
-    .dynamic-text{
+    .dynamic-text h1{
         text-align: center;
     }
 
