@@ -9,7 +9,7 @@
     flex-wrap: wrap;
     color: #fff; /* Text color */
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
-    z-index: 110;
+    z-index: 101;
   }
 
   .footer.dark-mode{
@@ -18,15 +18,12 @@
 
   .footer-container{
     margin: 0 auto;
-    border: var(--light-secondary) solid 0.7em;
-    border-bottom: none;
-    padding: 1em;
+    border-top: var(--light-secondary) solid 0.7em;
   }
   
   .footer-content {
-    padding: 1em;
+    padding-left: 1em;
     display: flex;
-    max-width: 1200px;
     margin: 0 auto;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -103,7 +100,7 @@
   .sign-up-form{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
   }
 
   .email-input {

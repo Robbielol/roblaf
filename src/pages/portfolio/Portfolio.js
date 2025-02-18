@@ -25,11 +25,10 @@ const UpdateClientData = async (e) => {
         
         const updatedclientList = await Promise.all(updatedPromises);
         clientList = updatedclientList; 
-        const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/write-to-file`, {
+        await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/write-to-file`, {
             filePath: filePath, 
             data: clientList
         });
-        console.log(response.status)
     } catch (error) {
         console.error('Error saving file:', error);
     }
