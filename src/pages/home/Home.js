@@ -112,11 +112,7 @@ const HeaderImage = ({setTextFunc, displayText, aboutSectionRef}) => {
                         Looking to bring a adept software engineer into your team? <br/>
                         I specialize in building custom websites and applications that are fast, modern, and tailored to your business needs.<br/>
                         <br/>                   
-                        New Website or Application – Designed from scratch for maximum impact.<br/>
-                        Enhancements & Fixes – Add, edit, or optimize content and features.<br/>
-                        Speed & Performance – Improve loading times and user experience.<br/>
-                        <br/>
-                        Let's bring your vision to life! Click the button to get in contact  with me today.
+                        Let's bring your vision to life! Click the button below to get in contact with me today.
                     </p>
                 </div>
                 <div>
