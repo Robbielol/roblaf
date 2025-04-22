@@ -31,10 +31,10 @@ const HeaderBar = () => {
     }, [darkMode]);
 
     const handleDownload = () => {
-        const fileUrl = "/Robert-Laffan.docx"; // Replace with your file URL
+        const fileUrl = "/Robert Laffan.pdf"; // Replace with your file URL
         const link = document.createElement("a");
         link.href = fileUrl;
-        link.download = "Robert-Laffan.docx"; // Set the file name for download
+        link.download = "Robert Laffan.pdf"; // Set the file name for download
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
