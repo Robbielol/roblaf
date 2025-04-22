@@ -78,8 +78,8 @@ h1, h2{
 }
 
 .profile-image-wrapper::before {
-    top: 2em;
-    left: 2em;
+    top: 0em;
+    left: 0em;
     width: 3em; /* Adjust size of the corner border */
     height: 3em;
     border-right: none;
@@ -88,7 +88,7 @@ h1, h2{
 
 .profile-image-wrapper::after {
     bottom: -1.2em;
-    right: 0;
+    right: -1em;
     width: 3em; /* Adjust size of the corner border */
     height: 3em;
     border-left: none;

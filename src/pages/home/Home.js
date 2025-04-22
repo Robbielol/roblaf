@@ -95,9 +95,6 @@ const HeaderImage = ({setTextFunc, displayText, aboutSectionRef}) => {
                 <h2>Welcome!</h2> 
                 <h2>I am <h2 className="text-style">Robert Laffan</h2></h2> 
                 <div className="middle-text">
-                    <div className="static-text">               
-                        <h1>I am...</h1>
-                    </div>
                     <div className="dynamic-text">
                         <h1>{displayTitleDesc}</h1>
                     </div>
